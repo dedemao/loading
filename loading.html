@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>Document</title>
+    <style>
+        blockquote, body, button, code, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, td, textarea, th, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .el-loading-mask {
+            position: absolute;
+            z-index: 2000;
+            background-color: hsla(0,0%,100%,.9);
+            margin: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            transition: opacity .3s;
+        }
+        .el-loading-spinner {
+            top: 50%;
+            margin-top: -21px;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+        }
+        .el-loading-spinner .el-loading-text {
+            color: #ff6562;
+            margin: 3px 0;
+            font-size: 14px;
+        }
+        .el-loading-spinner .circular {
+            height: 42px;
+            width: 42px;
+            animation: loading-rotate 2s linear infinite;
+        }
+        .el-loading-spinner .path {
+            animation: loading-dash 1.5s ease-in-out infinite;
+            stroke-dasharray: 90,150;
+            stroke-dashoffset: 0;
+            stroke-width: 2;
+            stroke: #ff6562;
+            stroke-linecap: round;
+        }
+        svg:not(:root), symbol, image, marker, pattern, foreignObject {
+            overflow: hidden;
+        }
+        @keyframes loading-rotate{to{transform:rotate(1turn)}}@keyframes loading-dash{0%{stroke-dasharray:1,200;stroke-dashoffset:0}50%{stroke-dasharray:90,150;stroke-dashoffset:-40px}to{stroke-dasharray:90,150;stroke-dashoffset:-120px}}
+    </style>
+</head>
+<body>
+	    <div class="el-loading-mask">
+		<div class="el-loading-spinner">
+		    <svg viewBox="25 25 50 50" class="circular">
+			<circle cx="50" cy="50" r="20" fill="none" class="path"></circle>
+		    </svg>
+		    <p class="el-loading-text">拼命加载中</p></div>
+	    </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+#loader-wrapper {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:1031;
+    background-color:#FFF;
+    z-index:999999
+}
+#loader-wrapper .loader {
+    position:absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
+    width:100px;
+    height:100px;
+    animation:spin .6s linear infinite reverse
+}
+#loader-wrapper .loader .ball {
+    position:absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
+    height:100%;
+    -webkit-animation:spin 1s infinite ease-in-out;
+    animation:spin 1s infinite ease-in-out
+}
+#loader-wrapper .loader .ball:after {
+    position:absolute;
+    content:'';
+    background-color:#DE7900;
+    width:7px;
+    height:7px;
+    border-radius:100%;
+    top:0
+}
+#loader-wrapper .loader .ball:nth-child(1) {
+    -webkit-animation-delay:-0s;
+    animation-delay:-0s
+}
+#loader-wrapper .loader .ball:nth-child(2) {
+    -webkit-animation-delay:-0.1s;
+    animation-delay:-0.1s
+}
+#loader-wrapper .loader .ball:nth-child(3) {
+    -webkit-animation-delay:-0.2s;
+    animation-delay:-0.2s
+}
+#loader-wrapper .loader .ball:nth-child(4) {
+    -webkit-animation-delay:-0.3s;
+    animation-delay:-0.3s
+}
+#loader-wrapper .loader .ball:nth-child(5) {
+    -webkit-animation-delay:-0.4s;
+    animation-delay:-0.4s
+}
+#loader-wrapper .loader .ball:nth-child(6) {
+    -webkit-animation-delay:-0.5s;
+    animation-delay:-0.5s
+}
+#loader-wrapper .loader .ball:nth-child(7) {
+    -webkit-animation-delay:-0.6s;
+    animation-delay:-0.6s
+}
+#loader-wrapper .loader .ball:nth-child(8) {
+    -webkit-animation-delay:-0.7s;
+    animation-delay:-0.7s
+}
+#loader-wrapper .loader .ball:nth-child(9) {
+    -webkit-animation-delay:-0.8s;
+    animation-delay:-0.8s
+}
+#loader-wrapper .loader .ball:nth-child(10) {
+    -webkit-animation-delay:-0.9s;
+    animation-delay:-0.9s
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform:translate(-50%, -50%) rotate(0deg);
+        transform:translate(-50%, -50%) rotate(0deg)
+    }
+    100% {
+        -webkit-transform:translate(-50%, -50%) rotate(360deg);
+        transform:translate(-50%, -50%) rotate(360deg)
+    }
+}
+@keyframes spin {
+    0% {
+        -webkit-transform:translate(-50%, -50%) rotate(0deg);
+        transform:translate(-50%, -50%) rotate(0deg)
+    }
+    100% {
+        -webkit-transform:translate(-50%, -50%) rotate(360deg);
+        transform:translate(-50%, -50%) rotate(360deg)
+    }
+}
+  </style>
+ </head>
+ <body>
+  <div id="loader-wrapper">
+            <div class="loader">
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+            </div>
+        </div>
+ </body>
+</html>

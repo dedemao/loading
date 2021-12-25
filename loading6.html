@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+  .global-loading {
+        position:fixed;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        background:#fff;
+        z-index:100000
+    }
+    .global-loading .loading-wrapper {
+        position:absolute;
+        border-radius:100%;
+        top:50%;
+        left:50%;
+        transform:translate(-50%, -50%)
+    }
+    .global-loading .loading-wrapper .loading {
+        width:80px;
+        height:80px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        -webkit-animation:1.3s cubic-bezier(.25, .1, .25, 1) infinite loading;
+        animation:1.3s cubic-bezier(.25, .1, .25, 1) infinite loading
+    }
+    .global-loading .loading-wrapper .loading>div {
+        position:relative;
+        width:80px;
+        height:22px
+    }
+    .global-loading .loading-wrapper .loading>div>span {
+        position:absolute;
+        width:100%;
+        height:22px;
+        top:0;
+        left:0
+    }
+    .global-loading .loading-wrapper .loading>div>span::before {
+        content:'';
+        position:absolute;
+        width:22px;
+        height:22px;
+        border-radius:50%;
+        top:0;
+        left:0;
+        -webkit-animation:1.3s cubic-bezier(.25, .1, .25, 1) infinite loading-box;
+        animation:1.3s cubic-bezier(.25, .1, .25, 1) infinite loading-box
+    }
+    .global-loading .loading-wrapper .loading>div>span:nth-child(1) {
+        transform:rotate(90deg)
+    }
+    .global-loading .loading-wrapper .loading>div>span:nth-child(1)::before {
+        background:#348fe4
+    }
+    .global-loading .loading-wrapper .loading>div>span:nth-child(2) {
+        transform:rotate(210deg)
+    }
+    .global-loading .loading-wrapper .loading>div>span:nth-child(2)::before {
+        background:#fa8b7c
+    }
+    .global-loading .loading-wrapper .loading>div>span:nth-child(3) {
+        transform:rotate(330deg)
+    }
+    .global-loading .loading-wrapper .loading>div>span:nth-child(3)::before {
+        background:#3ddc91
+    }
+    .global-loading .loading-tips {
+        margin-top:40px;
+        color:#666;
+        font-size:1rem;
+        max-width:500px;
+        word-break:break-all;
+        text-align:center
+    }
+	  @-webkit-keyframes loading-box {
+        0% {
+            transform:translateX(0)
+        }
+        20.57%, 70.57% {
+            transform:translateX(60%)
+        }
+        100%, 92% {
+            transform:translateX(0)
+        }
+    }
+    @keyframes loading-box {
+        0% {
+            transform:translateX(0)
+        }
+        20.57%, 70.57% {
+            transform:translateX(60%)
+        }
+        100%, 92% {
+            transform:translateX(0)
+        }
+    }
+    @-webkit-keyframes loading {
+        0% {
+            transform:rotate(0)
+        }
+        100%, 92% {
+            transform:rotate(360deg)
+        }
+    }
+    @keyframes loading {
+        0% {
+            transform:rotate(0)
+        }
+        100%, 92% {
+            transform:rotate(360deg)
+        }
+    }
+  </style>
+ </head>
+ <body>
+  <div class="global-loading" id="global-loading">
+      <div class="loading-wrapper">
+        <div class="loading">
+          <div>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="loading-tips"></div>
+      </div>
+    </div>
+ </body>
+</html>
