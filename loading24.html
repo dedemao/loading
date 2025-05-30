@@ -1,0 +1,42 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+     <style>
+      #loadingBox {
+        width: 100vw;
+        height: 100vh;
+        display: -webkit-box;
+        display: flex;
+        position: fixed;
+        left: 0;
+        top: 0;
+        -webkit-box-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+                justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
+      }
+      @media (min-width: 900px) {
+        #loadingBox img {
+          width: 120px;
+          height: 120px;
+        }
+      }
+      @media (max-width: 600px) {
+        #loadingBox img {
+          width: 100px;
+          height: 100px;
+        }
+      }
+     </style>
+  </head>
+  <body>
+  <div id="loadingBox" style="background-color: rgb(247, 248, 250);">
+    <img id="loadingImg" src="https://static.tiangong.cn/fe/skywork-site-assets/images/home/loading.gif">
+    <p id="loadingText" style="color: rgb(72, 85, 104);">Loading</p>
+  </div>
+</body>
+</html>
